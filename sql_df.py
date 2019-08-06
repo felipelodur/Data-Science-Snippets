@@ -1,4 +1,6 @@
-# ----- SQL to DataFrame
+# ------ SQL to DataFrame
+
+import mysql.connector
 
 host = 'example.rds.amazonaws.com'
 database = 'dbname'
@@ -19,9 +21,11 @@ df = pd.read_sql_query("SELECT * from sales_data", con)
 con.close()
 
 
+
 # ------ DataFrame to SQL
 
 from sqlalchemy import create_engine
+
 textEngine = 'mysql+mysqlconnector://{}:{}@{}:{}/{}'.format(user,password,host,3306,database)
 engine = create_engine(textEngine, echo=False)
 
