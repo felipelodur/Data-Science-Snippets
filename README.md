@@ -1,2 +1,3 @@
 # Data-Science-Snippets
-Some useful snippets (at least for me :P)
+
+Some useful snippets for usual tasks in Data Science projects.
