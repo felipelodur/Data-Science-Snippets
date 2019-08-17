@@ -26,9 +26,9 @@ con.close()
 
 from sqlalchemy import create_engine
 
-textEngine = 'mysql+mysqlconnector://{}:{}@{}:{}/{}'.format(user,password,host,3306,database)
+textEngine = 'mysql+mysqlconnector://{}:{}@{}:{}/{}'.format(user,password,host,port,database)
 engine = create_engine(textEngine, echo=False)
 
-df.to_sql('Produtos', con=engine, if_exists='append')
+df.to_sql('TableName', con=engine, if_exists='append')
 con.close()
 
